@@ -238,8 +238,8 @@ bot.action('join', async (ctx)=>{
         }
         var yt = admin[0].yt
         ctx.deleteMessage();
-        ctx.replyWithMarkdown('*🔹 Follow our* [Youtube]('+yt+')\n\n*Submit your Youtube Link ✍️*',{disable_web_page_preview:true,reply_markup:{remove_keyboard: true}})
-        ctx.scene.enter('ytt')
+        ctx.replyWithMarkdown('*👋Hi '+ctx.from.first_name+' Welcome to '+admin[0].cur+' Airdrop\n\n🔽 Choose an option from the menu below 👇*',{parse_mode:'markdown',reply_markup:{keyboard:[['👤 My Account','💼 Wallet'],['👥 Referrals','🏧 Withdrawal'] ,['🔎Information']],resize_keyboard:true}})
+
     }catch(e){
         console.log(e)
 senderr(e)
@@ -375,7 +375,7 @@ bot.hears('👥 Referrals', async (ctx)=>{
         if(ctx.message.chat.type != 'private'){
             return
         }
-        ctx.replyWithPhoto('https://graph.org/file/6c5b4f2a90642568a1b84.jpg',{caption:"*🎁For A Limited Time, Join "+admin[0].cur+" Coin Airdrop And Get Free "+admin[0].cur+" As A Gift 🎁\n\n🎉 Join Link:\nt.me/"+bot.botInfo.username+"?start="+ctx.from.id+"*",parse_mode:'markdown'})
+        ctx.replyWithPhoto('https://graph.org/file/cc44d6a89c52df4f72c29.jpg',{caption:"*🎁For A Limited Time, Join "+admin[0].cur+" Coin Airdrop And Get Free "+admin[0].cur+" As A Gift 🎁\n\n🎉 Join Link:\nt.me/"+bot.botInfo.username+"?start="+ctx.from.id+"*",parse_mode:'markdown'})
         let botstat = admin[0].botstat
         if (botstat != 'Active'){
             ctx.replyWithMarkdown('*⛔ Currently Bot Is Under Maintenance*')
